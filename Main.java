@@ -1,15 +1,19 @@
 public class Main {
     public static void main(String[] args) {
 
-        // ===== UC3 =====
-        String name;
-
-        if (args.length > 0) {
-            name = args[0];
+        // ===== UC4 =====
+        if (args.length == 0) {
+            System.out.println("Hello World");
         } else {
-            name = "World";
-        }
+            System.out.print("Hello ");
 
-        System.out.println("Hello " + name);
+            for (int i = 0; i < args.length; i++) {
+                System.out.print(args[i]);
+
+                if (i != args.length - 1) {
+                    System.out.print(" ");
+                }
+            }
+        }
     }
 }
