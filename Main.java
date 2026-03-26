@@ -1,15 +1,21 @@
 public class Main {
     public static void main(String[] args) {
 
-        // ===== UC5 =====
+        // ===== UC6 =====
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            System.out.print("Hello ");
+            String result = "";
 
+            // enhanced for loop
             for (String name : args) {
-                System.out.print(name + " ");
+                result += name + ", ";
             }
+
+            // remove last ", "
+            result = result.substring(0, result.length() - 2);
+
+            System.out.println("Hello " + result);
         }
     }
 }
